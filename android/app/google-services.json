@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "114133901378",
+    "project_id": "young-sq-c01df",
+    "storage_bucket": "young-sq-c01df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114133901378:android:e4e84da891ffddcc7ccddb",
+        "android_client_info": {
+          "package_name": "com.example.young_squad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGzw4TffDXLPuvS9_nyAyBTDMxTATkz30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
