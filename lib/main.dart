@@ -1,16 +1,15 @@
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:young_squad/views/pages/contents_page.dart';
+import 'package:young_squad/views/pages/home_page.dart';
+import 'package:young_squad/views/pages/profile_page.dart';
+import 'package:young_squad/views/pages/record_page.dart';
+import 'controller/bottom_navigation_controller.dart';
 
 import 'package:flutter/material.dart';
 import 'package:young_squad/routes/routes.dart';
 import 'package:young_squad/routes/routes_name.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-
   runApp(const MyApp());
 }
 
@@ -29,4 +28,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

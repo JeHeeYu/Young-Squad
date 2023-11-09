@@ -20,4 +20,5 @@ samples, guidance on mobile development, and a full API reference.
 flutter pub add google_sign_in
 flutter pub add firebase_auth
 flutter pub add firebase_core
+flutter pub add fluttertoast
 ```
