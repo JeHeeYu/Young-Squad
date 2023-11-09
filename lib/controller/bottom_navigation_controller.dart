@@ -42,6 +42,7 @@ class _BottomNavigationControllerState
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.center,
       children: [
         SvgPicture.asset(
           Images.bgBottom,
