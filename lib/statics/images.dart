@@ -23,4 +23,15 @@ class Images {
   static const String selectArrowRightDisable = 'assets/images/img_select_arrow_right_disable.svg';
   static const String qrCode = 'assets/images/img_qr_code.svg';
   static const String startEnd = 'assets/images/img_start_end.svg';
+  static const String onboardingFirst = 'assets/images/img_onboarding_first.svg';
+  static const String onboardingSecond = 'assets/images/img_onboarding_second.svg';
+  static const String onboardingThird = 'assets/images/img_onboarding_third.svg';
+  static const String onboardingFourth = 'assets/images/img_onboarding_fourth.svg';
+  static const String onboardingFifth = 'assets/images/img_onboarding_fifth.svg';
+  static const String onboardingSixth = 'assets/images/img_onboarding_sixth.svg';
+  static const String onboardingSeventh = 'assets/images/img_onboarding_seventh.svg';
+  static const String onboardingEighth = 'assets/images/img_onboarding_eighth.svg';
+  static const String destinationBusan = 'assets/images/img_destination_busan.svg';
+  static const String destinationJeonju = 'assets/images/img_destination_jeonju.svg';
+  static const String destinationKyungju = 'assets/images/img_destination_kyungju.svg';
 }

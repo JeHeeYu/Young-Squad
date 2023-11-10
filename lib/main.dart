@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: RoutesName.homePage,
+      initialRoute: RoutesName.onboardingFirst,
       onGenerateRoute: Routes.generateRoute,
     );
   }
