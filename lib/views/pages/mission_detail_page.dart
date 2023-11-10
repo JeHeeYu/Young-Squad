@@ -18,7 +18,7 @@ class MisstionDetailPage extends StatefulWidget {
 }
 
 class _MisstionDetailPageState extends State<MisstionDetailPage> {
-  XFile? _image;
+  XFile? uploadImage;
   final ImagePicker picker = ImagePicker();
 
   Future getImage(ImageSource imageSource) async {
@@ -26,17 +26,17 @@ class _MisstionDetailPageState extends State<MisstionDetailPage> {
 
     if (pickedFile != null) {
       setState(() {
-        _image = XFile(pickedFile.path);
+        uploadImage = XFile(pickedFile.path);
       });
     }
   }
 
   Widget _buildPhotoArea() {
-    return _image != null
+    return uploadImage != null
         ? Container(
             width: 360,
             height: 360,
-            child: Image.file(File(_image!.path)),
+            child: Image.file(File(uploadImage!.path)),
           )
         : SvgPicture.asset(
             Images.imageUpload,

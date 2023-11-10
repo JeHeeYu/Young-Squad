@@ -35,4 +35,5 @@ class Images {
   static const String destinationJeonju = 'assets/images/img_destination_jeonju.svg';
   static const String destinationKyungju = 'assets/images/img_destination_kyungju.svg';
   static const String imageUpload = 'assets/images/img_image_upload.svg';
+  static const String open = 'assets/images/img_open.svg';
 }

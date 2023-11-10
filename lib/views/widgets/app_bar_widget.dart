@@ -10,25 +10,52 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          height: 90,
-          child: Center(
-            child: Text(
-              title,
-              style: const TextStyle(
-                  color: Colors.black,
-                  fontFamily: "Pretendard",
-                  fontWeight: FontWeight.w500,
-                  fontSize: 16),
+    return Padding(
+      padding: const EdgeInsets.only(top: 20.0),
+      child: Container(
+        height: 90,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.black,
+                  ),
+                ),
+                Text(
+                  title,
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontFamily: "Pretendard",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.refresh,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
             ),
-          ),
+            Padding(
+              padding: const EdgeInsets.only(top: 14.0),
+              child: SvgPicture.asset(
+                Images.titleLine,
+              ),
+            ),
+          ],
         ),
-        SvgPicture.asset(
-          Images.titleLine,
-        ),
-      ],
+      ),
     );
   }
 
