@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:young_squad/statics/colors.dart';
 
 import '../../statics/images.dart';
 import '../widgets/app_bar_widget.dart';
+
+import 'dart:io';
 
 class MisstionDetailPage extends StatefulWidget {
   const MisstionDetailPage({super.key});
@@ -15,6 +18,33 @@ class MisstionDetailPage extends StatefulWidget {
 }
 
 class _MisstionDetailPageState extends State<MisstionDetailPage> {
+  XFile? _image;
+  final ImagePicker picker = ImagePicker();
+
+  Future getImage(ImageSource imageSource) async {
+    final XFile? pickedFile = await picker.pickImage(source: imageSource);
+
+    if (pickedFile != null) {
+      setState(() {
+        _image = XFile(pickedFile.path);
+      });
+    }
+  }
+
+  Widget _buildPhotoArea() {
+    return _image != null
+        ? Container(
+            width: 360,
+            height: 360,
+            child: Image.file(File(_image!.path)),
+          )
+        : SvgPicture.asset(
+            Images.imageUpload,
+            width: 360,
+            height: 360,
+          );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,10 +72,11 @@ class _MisstionDetailPageState extends State<MisstionDetailPage> {
               const SizedBox(height: 19),
               SvgPicture.asset(Images.titleLine),
               const SizedBox(height: 18),
-              SvgPicture.asset(
-                Images.imageUpload,
-                width: 360,
-                height: 360,
+              GestureDetector(
+                onTap: () async {
+                  getImage(ImageSource.gallery);
+                },
+                child: _buildPhotoArea(),
               ),
               const SizedBox(height: 19),
               SvgPicture.asset(Images.titleLine),

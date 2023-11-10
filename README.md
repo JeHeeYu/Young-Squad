@@ -22,4 +22,5 @@ flutter pub add firebase_auth
 flutter pub add firebase_core
 flutter pub add fluttertoast
 flutter pub add smooth_page_indicator
+flutter pub add image_picker
 ```
