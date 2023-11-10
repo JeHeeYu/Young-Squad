@@ -21,11 +21,31 @@ class MainProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  int mate = 0;
-  int get getMate => mate;
+  int language = 0;
+  int get getLanguage => language;
 
-  void setMate(int value) {
-    mate = value;
+  void setLanguage(int value) {
+    print("Jehee $value");
+    language = value;
+
+    notifyListeners();
+  }
+
+  int travelWith = 0;
+  int get getTravelWith => travelWith;
+
+  void setTravelWith(int value) {
+    print("Jehee $value");
+    travelWith = value;
+
+    notifyListeners();
+  }
+
+  int myRole = 0;
+  int get getMyRole => myRole;
+
+  void setMyRole(int value) {
+    myRole = value;
 
     notifyListeners();
   }

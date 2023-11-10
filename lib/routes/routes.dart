@@ -55,6 +55,9 @@ class Routes {
       case RoutesName.missionDetailPage:
         return MaterialPageRoute(
             builder: (BuildContext context) => const MisstionDetailPage());
+      case RoutesName.findColleaguePage:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const FindColleaguePage());
       case RoutesName.homePage:
       default:
         return MaterialPageRoute(

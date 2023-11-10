@@ -6,8 +6,10 @@ import 'package:young_squad/controller/bottom_navigation_controller.dart';
 import 'package:young_squad/statics/colors.dart';
 import 'package:young_squad/views/widgets/bus_check_dialog.dart';
 
+import '../../network/network_manager.dart';
 import '../../routes/routes_name.dart';
 import '../../statics/images.dart';
+import '../../statics/strings.dart';
 import '../widgets/bus_reservation_dialog.dart';
 
 class HomePage extends StatefulWidget {
@@ -54,6 +56,10 @@ Widget bgTextRectangle(double width, double height, double radius, String text,
 }
 
 class _HomePageState extends State<HomePage> {
+  NetworkManager networkManager = NetworkManager();
+
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -290,8 +296,13 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 15.0),
-                            child: bgTextRectangle(328, 38, 8, "함께할 친구 찾으러 가기",
-                                const Color(UserColors.greyColor), 16),
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.pushNamed(context, RoutesName.findColleaguePage);
+                              },
+                              child: bgTextRectangle(328, 38, 8, Strings.findColleague,
+                                  const Color(UserColors.greyColor), 16),
+                            ),
                           ),
                         ],
                       ),

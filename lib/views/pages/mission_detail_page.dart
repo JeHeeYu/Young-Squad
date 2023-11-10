@@ -64,8 +64,8 @@ class _MisstionDetailPageState extends State<MisstionDetailPage> {
                     fontSize: 14),
               ),
               const SizedBox(height: 9),
-              SvgPicture.asset(
-                Images.destinationBusan,
+              Image.asset(
+                Images.missionDestination,
                 width: 340,
                 height: 179,
               ),

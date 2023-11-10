@@ -13,8 +13,14 @@ import 'package:young_squad/routes/routes.dart';
 import 'package:young_squad/routes/routes_name.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => MainProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -22,20 +28,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<MainProvider>(create: (_) => MainProvider()),
-      ],
-      child: MaterialApp(
-        title: 'Young Squad',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        //initialRoute: RoutesName.onboardingFirst,
-        // need edit route
-        initialRoute: RoutesName.recordPage,
-        onGenerateRoute: Routes.generateRoute,
+    return MaterialApp(
+      title: 'Young Squad',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      initialRoute: RoutesName.onboardingFirst,
+      // need edit route
+      //initialRoute: RoutesName.recordPage,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }

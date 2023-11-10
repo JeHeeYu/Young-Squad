@@ -41,6 +41,7 @@ dependencies:
   fluttertoast: ^8.2.3
   smooth_page_indicator: ^1.1.0
   image_picker: ^1.0.4
+  http: ^0.13.6
 
 dev_dependencies:
   flutter_test:

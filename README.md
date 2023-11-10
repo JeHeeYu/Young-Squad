@@ -24,4 +24,5 @@ flutter pub add fluttertoast
 flutter pub add smooth_page_indicator
 flutter pub add image_picker
 flutter pub add provider
+flutter pub add http
 ```

@@ -8,4 +8,25 @@ class Strings {
   static const String girl = "여";
   static const String birthdayGuide = "여행자님의 출생연도를 입력해주세요!";
   static const String next = "다음";
+  static const String findColleague = "함께할 친구 찾으러 가기";
+  static const String settingLanguage = "여행자님의 언어를 설정해주세요!";
+  static const String mateGuide = "이번 여행은 몇 명의 메이트와 함께 하시나요?";
+  static const String solo = "혼자";
+  static const String together = "여행 메이트와 함께";
+  static const String roleNow = "이번 여행에서 여행자님의 역할은 무엇인가요?";
+  static const String isMate = "리더에요!";
+  static const String isLeader = "메이트에요!";
+  static const String inputTripDate = "이번 여행의 일정을 입력해주세요!";
+  static const String fromKorea = "한국에 도착하는 날짜";
+  static const String toHomeTown = "고향으로 돌아가는 날짜";
+  static const String entranceAirport = "입국하는 공항을 선택해주세요!";
+  static const String incheonAirport = "인천 국제공항";
+  static const String kimpoAirport = "김포 국제공항";
+  static const String kimhaeAirport = "김해 국제공항";
+  static const String jaejuAirport = "제주 국제공항";
+  static const String daeguAirport = "대구 국제공항";
+  static const String other = "기타";
+  static const String selectLastDestination = "최종 여행지를 선택해주세요!";
+  static const String selectThemaGuide = "선택한 테마를 기반으로 추천하는 3곳의 여행지입니다.";
+  static const String hereGo = "여기로 떠날래요";
 }
