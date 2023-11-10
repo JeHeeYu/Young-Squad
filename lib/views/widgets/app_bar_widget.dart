@@ -20,14 +20,13 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
               style: const TextStyle(
                   color: Colors.black,
                   fontFamily: "Pretendard",
-                  fontWeight: FontWeight.w500),
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16),
             ),
           ),
         ),
         SvgPicture.asset(
           Images.titleLine,
-          // width: 100,
-          // height: 30,
         ),
       ],
     );

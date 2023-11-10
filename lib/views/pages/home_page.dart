@@ -6,6 +6,7 @@ import 'package:young_squad/controller/bottom_navigation_controller.dart';
 import 'package:young_squad/statics/colors.dart';
 import 'package:young_squad/views/widgets/bus_check_dialog.dart';
 
+import '../../routes/routes_name.dart';
 import '../../statics/images.dart';
 import '../widgets/bus_reservation_dialog.dart';
 
@@ -304,33 +305,38 @@ class _HomePageState extends State<HomePage> {
                     bgRectangle(360, 62, 16),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 35.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          bgTextRectangle(65, 32, 12, "개인 미션",
-                              const Color(UserColors.enableColor), 12),
-                          Container(
-                            width: 230,
-                            child: Text(
-                              '해운대에서 한명 모래찜질 시켜주기',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontFamily: "Pretendard",
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16,
-                                overflow: TextOverflow.ellipsis,
+                      child: GestureDetector(
+                        onTap: (){
+                          Navigator.pushNamed(context, RoutesName.missionDetailPage);
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            bgTextRectangle(65, 32, 12, "개인 미션",
+                                const Color(UserColors.enableColor), 12),
+                            Container(
+                              width: 230,
+                              child: Text(
+                                '해운대에서 한명 모래찜질 시켜주기',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: "Pretendard",
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
-                            child: SvgPicture.asset(
-                              Images.arrowRight,
-                              width: 10,
-                              height: 18,
+                            Padding(
+                              padding: const EdgeInsets.only(right: 10.0),
+                              child: SvgPicture.asset(
+                                Images.arrowRight,
+                                width: 10,
+                                height: 18,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ],

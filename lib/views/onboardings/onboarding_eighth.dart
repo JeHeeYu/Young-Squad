@@ -45,7 +45,7 @@ class OnboardingEighth extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 25),
-                SvgPicture.asset(Images.destinationBusan),
+                SvgPicture.network(Images.destinationBusan),
                 const SizedBox(height: 10),
                 SvgPicture.asset(Images.destinationJeonju),
                 const SizedBox(height: 10),

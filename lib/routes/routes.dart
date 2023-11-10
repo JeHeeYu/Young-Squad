@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:young_squad/routes/routes_name.dart';
 import 'package:young_squad/views/onboardings/onboarding_fifth.dart';
+import 'package:young_squad/views/pages/mission_detail_page.dart';
 
 import '../views/onboardings/onboarding_first.dart';
 import '../views/onboardings/onboarding_eighth.dart';
@@ -51,6 +52,9 @@ class Routes {
       case RoutesName.onboardingEighth:
         return MaterialPageRoute(
             builder: (BuildContext context) => const OnboardingEighth());
+      case RoutesName.missionDetailPage:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const MisstionDetailPage());
       case RoutesName.homePage:
       default:
         return MaterialPageRoute(

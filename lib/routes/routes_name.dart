@@ -12,4 +12,5 @@ class RoutesName {
   static const String onboardingSixth = "onboarding_sixth";
   static const String onboardingSeventh = "onboarding_seventh";
   static const String onboardingEighth = "onboarding_eighth";
+  static const String missionDetailPage = "mission_detail_page";
 }
