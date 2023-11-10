@@ -14,4 +14,7 @@ class Images {
   static const String icoBus = 'assets/images/img_ico_bus.svg';
   static const String stampGood = 'assets/images/img_stamp_good.svg';
   static const String arrowRight = 'assets/images/img_arrow_right.svg';
+  static const String progressBarHalf = 'assets/images/img_progress_bar_half.svg';
+  static const String icoCalendar = 'assets/images/img_ico_calendar.svg';
+  static const String radioButtonDisable = 'assets/images/img_radio_button_disable.svg';
 }

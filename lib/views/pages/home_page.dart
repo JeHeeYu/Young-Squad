@@ -6,6 +6,7 @@ import 'package:young_squad/controller/bottom_navigation_controller.dart';
 import 'package:young_squad/statics/colors.dart';
 
 import '../../statics/images.dart';
+import '../widgets/bus_reservation_dialog.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -35,7 +36,7 @@ Widget bgTextRectangle(double width, double height, double radius, String text,
         height: height,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius),
-          color: backgroundColor, //const Color(UserColors.blueColor),
+          color: backgroundColor, //const Color(UserColors.enableColor),
         ),
       ),
       Text(
@@ -73,12 +74,17 @@ class _HomePageState extends State<HomePage> {
                     Positioned(
                       top: 16,
                       left: 16,
-                      child: Container(
-                        width: 42,
-                        height: 42,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.red,
+                      child: GestureDetector(
+                        onTap: (){
+                          BusReservationDialog.showBusReservationDialog(context);
+                        },
+                        child: Container(
+                          width: 42,
+                          height: 42,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.red,
+                          ),
                         ),
                       ),
                     ),
@@ -133,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                           Text(
                             '부산행 / BUSAN',
                             style: TextStyle(
-                                color: const Color(UserColors.blueColor),
+                                color: const Color(UserColors.enableColor),
                                 fontFamily: "Pretendard",
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16),
@@ -261,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.only(top: 10.0, left: 10.0),
                       child: bgTextRectangle(86, 32, 12, "함께하는 미션",
-                          const Color(UserColors.blueColor), 12),
+                          const Color(UserColors.enableColor), 12),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 55.0, left: 15.0),
@@ -296,7 +302,7 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           bgTextRectangle(65, 32, 12, "개인 미션",
-                              const Color(UserColors.blueColor), 12),
+                              const Color(UserColors.enableColor), 12),
                           Container(
                             width: 230,
                             child: Text(
