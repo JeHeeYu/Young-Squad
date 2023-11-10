@@ -19,7 +19,7 @@ class BusReservationDialog {
     color: Colors.grey,
   );
 
-  static void showBusReservationDialog(BuildContext context) {
+  static void show(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext ctx) {

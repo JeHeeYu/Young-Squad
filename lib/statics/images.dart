@@ -17,4 +17,10 @@ class Images {
   static const String progressBarHalf = 'assets/images/img_progress_bar_half.svg';
   static const String icoCalendar = 'assets/images/img_ico_calendar.svg';
   static const String radioButtonDisable = 'assets/images/img_radio_button_disable.svg';
+  static const String selectArrowLeftEnable = 'assets/images/img_select_arrow_left_enable.svg';
+  static const String selectArrowLeftDisable = 'assets/images/img_select_arrow_left_disable.svg';
+  static const String selectArrowRightEnable = 'assets/images/img_select_arrow_right_enable.svg';
+  static const String selectArrowRightDisable = 'assets/images/img_select_arrow_right_disable.svg';
+  static const String qrCode = 'assets/images/img_qr_code.svg';
+  static const String startEnd = 'assets/images/img_start_end.svg';
 }

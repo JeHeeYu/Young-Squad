@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:young_squad/controller/bottom_navigation_controller.dart';
 import 'package:young_squad/statics/colors.dart';
+import 'package:young_squad/views/widgets/bus_check_dialog.dart';
 
 import '../../statics/images.dart';
 import '../widgets/bus_reservation_dialog.dart';
@@ -76,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                       left: 16,
                       child: GestureDetector(
                         onTap: (){
-                          BusReservationDialog.showBusReservationDialog(context);
+                          BusReservationDialog.show(context);
                         },
                         child: Container(
                           width: 42,
@@ -125,45 +126,50 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 const SizedBox(height: 12),
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    bgRectangle(360, 63, 16),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          SvgPicture.asset(Images.icoBus),
-                          Text(
-                            '부산행 / BUSAN',
-                            style: TextStyle(
-                                color: const Color(UserColors.enableColor),
-                                fontFamily: "Pretendard",
-                                fontWeight: FontWeight.w600,
-                                fontSize: 16),
-                          ),
-                          Text(
-                            '2023/11/09',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontFamily: "Pretendard",
-                                fontWeight: FontWeight.w600,
-                                fontSize: 11),
-                          ),
-                          Text(
-                            'AM 10 : 42',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontFamily: "Pretendard",
-                                fontWeight: FontWeight.w600,
-                                fontSize: 11),
-                          ),
-                        ],
+                GestureDetector(
+                  onTap: (){
+                    BusCheckDialog.show(context);
+                  },
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      bgRectangle(360, 63, 16),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SvgPicture.asset(Images.icoBus),
+                            Text(
+                              '부산행 / BUSAN',
+                              style: TextStyle(
+                                  color: const Color(UserColors.enableColor),
+                                  fontFamily: "Pretendard",
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 16),
+                            ),
+                            Text(
+                              '2023/11/09',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: "Pretendard",
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 11),
+                            ),
+                            Text(
+                              'AM 10 : 42',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: "Pretendard",
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 11),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 12),
                 Stack(

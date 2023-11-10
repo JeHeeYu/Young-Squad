@@ -39,6 +39,7 @@ dependencies:
   flutter_provider: ^2.1.0
   provider: ^6.0.5
   fluttertoast: ^8.2.3
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   flutter_test:

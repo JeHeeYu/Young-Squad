@@ -21,4 +21,5 @@ flutter pub add google_sign_in
 flutter pub add firebase_auth
 flutter pub add firebase_core
 flutter pub add fluttertoast
+flutter pub add smooth_page_indicator
 ```
