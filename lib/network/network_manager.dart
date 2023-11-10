@@ -10,14 +10,19 @@ class NetworkManager {
   Future<dynamic> post(String url, Map<String, dynamic> data) async {
     final request = http.MultipartRequest('POST', Uri.parse(url));
 
-    // 필요한 헤더 설정
+    print("Jehee 2");
+
     request.headers.addAll(headers);
 
+    print("Jehee 3");
+
     data.forEach((key, value) {
+      print("Jehee 4");
       request.fields[key] = value.toString();
     });
 
     try {
+      print("Jehee 5");
       final response = await request.send();
 
       final responseStream = await response.stream.bytesToString();

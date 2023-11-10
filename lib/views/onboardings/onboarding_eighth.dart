@@ -92,7 +92,8 @@ class OnboardingEighth extends StatelessWidget {
                   };
 
                   try {
-                    String serverUrl = "http://43.202.106.98:8080";
+                    print("Jehee 1");
+                    String serverUrl = "http://43.202.106.98:8080/onboard/complete";
 
                     dynamic response =
                         await networkManager.post(serverUrl, userData);
