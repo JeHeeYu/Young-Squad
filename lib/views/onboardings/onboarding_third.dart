@@ -10,19 +10,23 @@ import '../../statics/colors.dart';
 import '../../statics/images.dart';
 import '../../statics/strings.dart';
 
-class OnboardingThird extends StatelessWidget {
+class OnboardingThird extends StatefulWidget {
   const OnboardingThird({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    int selectIndex = 0;
+  State<OnboardingThird> createState() => _OnboardingThirdState();
+}
 
-    Widget bgTextRectangle(BuildContext context, String text, int index) {
+class _OnboardingThirdState extends State<OnboardingThird> {
+  int selectIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    Widget bgTextRectangle(BuildContext context, String text, int index, Color color) {
       return GestureDetector(
         onTap: () {
           selectIndex = index;
 
-          print("Jehee $selectIndex");
+          setState(() {});
         },
         child: Stack(
           alignment: Alignment.center,
@@ -32,7 +36,7 @@ class OnboardingThird extends StatelessWidget {
               height: 78,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                color: Colors.white, //const Color(UserColors.enableColor),
+                color: color, //const Color(UserColors.enableColor),
               ),
             ),
             Text(
@@ -59,7 +63,7 @@ class OnboardingThird extends StatelessWidget {
               Expanded(
                 child: Column(
                   children: [
-                    const SizedBox(height: 87),
+                    const SizedBox(height: 57),
                     SvgPicture.asset(
                       Images.onboardingThird,
                       width: 420,
@@ -78,15 +82,19 @@ class OnboardingThird extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        bgTextRectangle(context, Strings.solo, 0),
-                        bgTextRectangle(context, Strings.together, 1),
+                        selectIndex == 0
+                        ? bgTextRectangle(context, Strings.solo, 0, Color(UserColors.enableColor))
+                        : bgTextRectangle(context, Strings.solo, 0, Colors.white),
+                        selectIndex == 1
+                        ? bgTextRectangle(context, Strings.together, 1, Color(UserColors.enableColor))
+                        : bgTextRectangle(context, Strings.together, 1, Colors.white),
                       ],
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 64),
+                padding: const EdgeInsets.only(bottom: 44),
                 child: GestureDetector(
                   onTap: () {
                     context.read<MainProvider>().setTravelWith(selectIndex);

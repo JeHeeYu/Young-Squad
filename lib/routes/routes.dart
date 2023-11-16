@@ -11,10 +11,12 @@ import '../views/onboardings/onboarding_sixth.dart';
 import '../views/onboardings/onboarding_second.dart';
 import '../views/onboardings/onboarding_third.dart';
 import '../views/pages/contents_page.dart';
+import '../views/pages/empty_home_page.dart';
 import '../views/pages/find_colleague_page.dart';
 import '../views/pages/home_page.dart';
 import '../views/pages/profile_page.dart';
 import '../views/pages/record_page.dart';
+import '../views/pages/team_mission_detail_page copy.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -55,9 +57,15 @@ class Routes {
       case RoutesName.missionDetailPage:
         return MaterialPageRoute(
             builder: (BuildContext context) => const MisstionDetailPage());
+      case RoutesName.teamMissionDetailPage:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const TeamMisstionDetailPage());
       case RoutesName.findColleaguePage:
         return MaterialPageRoute(
             builder: (BuildContext context) => const FindColleaguePage());
+      case RoutesName.emptyHomePage:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const EmptyHomePage());
       case RoutesName.homePage:
       default:
         return MaterialPageRoute(

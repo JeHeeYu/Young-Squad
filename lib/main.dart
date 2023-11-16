@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: RoutesName.onboardingFirst,
       // need edit route
-      //initialRoute: RoutesName.recordPage,
+      //initialRoute: RoutesName.homePage,
       onGenerateRoute: Routes.generateRoute,
     );
   }

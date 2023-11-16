@@ -25,4 +25,7 @@ flutter pub add smooth_page_indicator
 flutter pub add image_picker
 flutter pub add provider
 flutter pub add http
+flutter pub add intl
+flutter pub add localstorage
+flutter pub add shared_preferences
 ```

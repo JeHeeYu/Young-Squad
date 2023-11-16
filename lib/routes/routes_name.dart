@@ -1,6 +1,7 @@
 class RoutesName {
   static const String findColleaguePage = "find_colleague_page";
   static const String homePage = "home_page";
+  static const String emptyHomePage = "empty_home_page";
   static const String contentsPage = "contents_page";
   static const String recordPage = "record_page";
   static const String profilePage = "profile_page";
@@ -13,4 +14,5 @@ class RoutesName {
   static const String onboardingSeventh = "onboarding_seventh";
   static const String onboardingEighth = "onboarding_eighth";
   static const String missionDetailPage = "mission_detail_page";
+  static const String teamMissionDetailPage = "team_mission_detail_page";
 }

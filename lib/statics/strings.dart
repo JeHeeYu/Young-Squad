@@ -7,6 +7,7 @@ class Strings {
   static const String man = "남";
   static const String girl = "여";
   static const String birthdayGuide = "여행자님의 출생연도를 입력해주세요!";
+  static const String userNumberGuide = "여행자님의 유저 번호를 입력해주세요!";
   static const String next = "다음";
   static const String findColleague = "함께할 친구 찾으러 가기";
   static const String settingLanguage = "여행자님의 언어를 설정해주세요!";
@@ -29,4 +30,17 @@ class Strings {
   static const String selectLastDestination = "최종 여행지를 선택해주세요!";
   static const String selectThemaGuide = "선택한 테마를 기반으로 추천하는 3곳의 여행지입니다.";
   static const String hereGo = "여기로 떠날래요";
+  static const String myProfile = "내 정보";
+  static const String otherTrip = "다른 곳의 여행을 시작할게요";
+  static const String profileSubGuide = "다른 곳에서의 여행을 시작해도 전 여행의 기록은 언제나 남아있습니다.";
+  static const String busHistory = "버스 내역";
+  static const String showBusReservation = "예약한 버스 내역 보기";
+  static const String tripInformation = "여행 정보";
+  static const String editTripInformation = "여행 정보 수정하기";
+  static const String themaSelect = "이번 여행의 주요 테마를 설정해주세요!";
+  static const String themaSelectGuide = "선택한 테마를 기반으로 여행지를 추천해줄게요!";
+  static const String yes = "네!";
+  static const String no = "아직이요";
+  static const String missionComplete = "미션 완료하기";
+  static const String challenageCompleteQuestion = "챌린지를 완료했나요?";
 }

@@ -10,19 +10,23 @@ import '../../statics/colors.dart';
 import '../../statics/images.dart';
 import '../../statics/strings.dart';
 
-class OnboardingSecond extends StatelessWidget {
+class OnboardingSecond extends StatefulWidget {
   const OnboardingSecond({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    int selectIndex = 0;
+  State<OnboardingSecond> createState() => _OnboardingSecondState();
+}
 
-    Widget bgTextRectangle(BuildContext context, String text, int index) {
+class _OnboardingSecondState extends State<OnboardingSecond> {
+  int selectIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    Widget bgTextRectangle(
+        BuildContext context, String text, int index, Color color) {
       return GestureDetector(
         onTap: () {
           selectIndex = index;
-
-          print("Jehee $selectIndex");
+          setState(() {});
         },
         child: Stack(
           alignment: Alignment.center,
@@ -32,7 +36,7 @@ class OnboardingSecond extends StatelessWidget {
               height: 78,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                color: Colors.white, //const Color(UserColors.enableColor),
+                color: color, //const Color(UserColors.enableColor),
               ),
             ),
             Text(
@@ -61,7 +65,7 @@ class OnboardingSecond extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 87),
+                    const SizedBox(height: 57),
                     SvgPicture.asset(
                       Images.onboardingSecond,
                       width: 420,
@@ -80,39 +84,68 @@ class OnboardingSecond extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        bgTextRectangle(context, "한국어", 0),
-                        bgTextRectangle(context, "English", 1),
+                        selectIndex == 0
+                            ? bgTextRectangle(context, "한국어", 0,
+                                Color(UserColors.enableColor))
+                            : bgTextRectangle(context, "한국어", 0, Colors.white),
+                        selectIndex == 1
+                            ? bgTextRectangle(context, "English", 1,
+                                Color(UserColors.enableColor))
+                            : bgTextRectangle(
+                                context, "English", 1, Colors.white)
                       ],
                     ),
                     const SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        bgTextRectangle(context, "中文", 2),
-                        bgTextRectangle(context, "日本語", 3),
+                        selectIndex == 2
+                            ? bgTextRectangle(
+                                context, "中文", 2, Color(UserColors.enableColor))
+                            : bgTextRectangle(context, "中文", 2, Colors.white),
+                        selectIndex == 3
+                            ? bgTextRectangle(context, "日本語", 3,
+                                Color(UserColors.enableColor))
+                            : bgTextRectangle(context, "日本語", 3, Colors.white)
                       ],
                     ),
                     const SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        bgTextRectangle(context, "Deutsch", 4),
-                        bgTextRectangle(context, "Castellano", 5),
+                        selectIndex == 4
+                            ? bgTextRectangle(context, "Deutsch", 4,
+                                Color(UserColors.enableColor))
+                            : bgTextRectangle(
+                                context, "Deutsch", 4, Colors.white),
+                        selectIndex == 5
+                            ? bgTextRectangle(context, "Castellano", 5,
+                                Color(UserColors.enableColor))
+                            : bgTextRectangle(
+                                context, "Castellano", 5, Colors.white)
                       ],
                     ),
                     const SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        bgTextRectangle(context, "Français", 6),
-                        bgTextRectangle(context, "Tiếng Việt", 7),
+                        selectIndex == 6
+                            ? bgTextRectangle(context, "Français", 6,
+                                Color(UserColors.enableColor))
+                            : bgTextRectangle(
+                                context, "Français", 6, Colors.white),
+                        selectIndex == 7
+                            ? bgTextRectangle(context, "Tiếng Việ", 7,
+                                Color(UserColors.enableColor))
+                            : bgTextRectangle(
+                                context, "Tiếng Việ", 7, Colors.white)
                       ],
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 64),
+                padding: const EdgeInsets.only(bottom: 44),
                 child: GestureDetector(
                   onTap: () {
                     context.read<MainProvider>().setLanguage(selectIndex);
@@ -126,7 +159,7 @@ class OnboardingSecond extends StatelessWidget {
                         height: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(4),
-                          color: const Color(UserColors.enableColor),
+                          color: Color(UserColors.enableColor),
                           border: Border.all(color: Colors.grey),
                         ),
                       ),

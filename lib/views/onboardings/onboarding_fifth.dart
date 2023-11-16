@@ -31,7 +31,7 @@ class OnboardingFifth extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 87),
+                    const SizedBox(height: 57),
                     SvgPicture.asset(
                       Images.onboardingFifth,
                       width: 420,
@@ -108,7 +108,7 @@ class OnboardingFifth extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 64),
+                padding: const EdgeInsets.only(bottom: 44),
                 child: GestureDetector(
                   onTap: (){
                     context.read<MainProvider>().setInDate(inDateController.text);

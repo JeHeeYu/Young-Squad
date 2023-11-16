@@ -10,19 +10,26 @@ import '../../statics/colors.dart';
 import '../../statics/images.dart';
 import '../../statics/strings.dart';
 
-class OnboardingFourth extends StatelessWidget {
+class OnboardingFourth extends StatefulWidget {
   const OnboardingFourth({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    int selectIndex = 0;
+  State<OnboardingFourth> createState() => _OnboardingFourthState();
+}
 
-    Widget bgTextRectangle(BuildContext context, String text, int index) {
+class _OnboardingFourthState extends State<OnboardingFourth> {
+  int selectIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    Widget bgTextRectangle(
+        BuildContext context, String text, int index, Color color) {
       return GestureDetector(
         onTap: () {
           selectIndex = index;
 
-          print("Jehee $selectIndex");
+          setState(() {
+            
+          });
         },
         child: Stack(
           alignment: Alignment.center,
@@ -32,7 +39,7 @@ class OnboardingFourth extends StatelessWidget {
               height: 78,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                color: Colors.white, //const Color(UserColors.enableColor),
+                color: color, //const Color(UserColors.enableColor),
               ),
             ),
             Text(
@@ -59,7 +66,7 @@ class OnboardingFourth extends StatelessWidget {
               Expanded(
                 child: Column(
                   children: [
-                    const SizedBox(height: 87),
+                    const SizedBox(height: 57),
                     SvgPicture.asset(
                       Images.onboardingFourth,
                       width: 420,
@@ -78,15 +85,23 @@ class OnboardingFourth extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        bgTextRectangle(context, Strings.isMate, 0),
-                        bgTextRectangle(context, Strings.isLeader, 1),
+                        selectIndex == 0
+                            ? bgTextRectangle(context, Strings.isMate, 0,
+                                Color(UserColors.enableColor))
+                            : bgTextRectangle(
+                                context, Strings.isMate, 0, Colors.white),
+                        selectIndex == 1
+                            ? bgTextRectangle(context, Strings.isLeader, 1,
+                                Color(UserColors.enableColor))
+                            : bgTextRectangle(
+                                context, Strings.isLeader, 1, Colors.white),
                       ],
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 64),
+                padding: const EdgeInsets.only(bottom: 44),
                 child: GestureDetector(
                   onTap: () {
                     context.read<MainProvider>().setMyRole(selectIndex);

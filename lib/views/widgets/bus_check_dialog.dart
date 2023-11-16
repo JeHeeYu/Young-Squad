@@ -42,7 +42,7 @@ class BusCheckDialog {
             child: Column(
               children: [
                 const SizedBox(height: 40),
-                Text(
+                const Text(
                   '예약 정보',
                   style: TextStyle(
                       color: Colors.black,
